@@ -1,5 +1,5 @@
 # DESCRIPTION
-I want to create a graphical extension that, when you click it, display the japanese title, english title, synonyms, chapters and authors of the manga page you are currently browsing in the MyAnimeList site. The informations are displayed like this:
+I want to create a graphical extension that, when you click it, display the japanese title, english title, synonyms, authors and chapters of the manga page you are currently browsing in "MyAnimeList.net". The informations are displayed like this:
 > \- **jap\_title** (**eng\_title**) (By **auth**) \[**ch**\]
 
 
