@@ -21,20 +21,6 @@ for(let i=0; i < other_elem.length; i++) {
         auth = other_elem[i].innerText.replaceAll(/Authors: |\(.+?\)/gi, '').replace(' , ', ' & ').replaceAll(',', '').trim()  // GET auth
 }
 
-console.log(jap_title)
-console.log(eng_title)
-console.log(syn)
-console.log(ch)
-console.log(auth)
-
-/*
-sessionStorage.setItem('jap_title', jap_title)
-sessionStorage.setItem('eng_title', eng_title)
-sessionStorage.setItem('syn', syn)
-sessionStorage.setItem('ch', ch)
-sessionStorage.setItem('auth', auth)
-*/
-
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     switch(request) {
         case 'jap_title':
