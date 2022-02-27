@@ -3,6 +3,7 @@
   "name": "MAL Manga Info",
   "version": "1.0.0",
   "description": "An extension to retrieve the basic information of a manga on MyAnimeList",
+  "homepage_url": "https://github.com/RettaInGit/MAL-manga-info",
   "content_scripts": [ {
         "matches": ["https://myanimelist.net/manga/*"],
         "js": ["main_js.js"]
