@@ -1,8 +1,8 @@
 let jap_title = 'NO_JAP_TITLE'
 let eng_title = 'NO_ENG_TITLE'
 let syn = 'NO_SYN'
-let ch = 'Unknown'
 let auth = 'NO_AUTH'
+let ch = 'Unknown'
 
 let clickEvent = new Event('click');
 
@@ -44,9 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // ADD EVENT TO CHECKBOX AND BUTTON
     jap_title_checkbox.addEventListener("click", update_result)
     eng_title_checkbox.addEventListener("click", update_result)
-    ch_checkbox.addEventListener("click", update_result)
     auth_checkbox.addEventListener("click", update_result)
+    ch_checkbox.addEventListener("click", update_result)
     result_button.addEventListener("click", copy_result)
+    // ADD EVENT TO TEXT
+    jap_title_text.addEventListener("keyup", update_result)
+    eng_title_text.addEventListener("keyup", update_result)
+    auth_text.addEventListener("keyup", update_result)
+    ch_text.addEventListener("keyup", update_result)
 
 
     // ON WINDOW FULL LOADED
@@ -93,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     for(let i=0; i<syn_array.length; i++) {
                         syn_text.value = syn_array[i]
                         syn_main_div.appendChild(syn_div.cloneNode(true))
-                        syn_main_div.lastChild.lastChild.addEventListener("click", update_result)
+                        syn_main_div.lastChild.firstChild.addEventListener("keyup", update_result)  // syn_text EVENT
+                        syn_main_div.lastChild.lastChild.addEventListener("click", update_result)  // syn_checkbox EVENT
                     }
                 }
                 else {
@@ -154,12 +160,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // WRITE CHAPTERS
+        // WRITE AUTHORS
         if((auth_checkbox.checked == true) && (auth_text.value != '')) {
             result_textarea.value += '(By ' + auth_text.value + ') ';
         }
 
-        // WRITE AUTHORS
+        // WRITE CHAPTERS
         if(ch_checkbox.checked == true) {
             result_textarea.value += '[' + ch_text.value + ']';
         }
