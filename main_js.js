@@ -16,7 +16,7 @@ for(let i=0; i < other_elem.length; i++) {
     if(other_elem[i].innerText.includes('Synonyms'))
         syn = other_elem[i].innerText.replace('Synonyms: ', '').trim()  // GET syn
     else if(other_elem[i].innerText.includes('Authors'))
-        auth = other_elem[i].innerText.replaceAll(/Authors: |\(.+?\)/gi, '').replace(' , ', ' & ').replaceAll(',', '').trim()  // GET auth
+        auth = other_elem[i].innerText.replaceAll(/Authors: |\(.+?\)/gi, '').replaceAll(' , ', ' & ').replaceAll(',', '').trim()  // GET auth
     else if(other_elem[i].innerText.includes('Chapters'))
         ch = other_elem[i].innerText.replace('Chapters: ', '').trim()  // GET ch
 }

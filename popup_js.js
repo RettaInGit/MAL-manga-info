@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 else {
                     syn_main_div.appendChild(syn_div)
+                    syn_main_div.lastChild.firstChild.addEventListener("keyup", update_result)  // syn_text EVENT
+                    syn_main_div.lastChild.lastChild.addEventListener("click", update_result)  // syn_checkbox EVENT
                 }
             }
         })
