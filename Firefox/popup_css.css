@@ -1,0 +1,35 @@
+body {
+    background: #2f51a3;
+    width: max-content;
+}
+
+h4 {
+    color: white;
+    margin: 2px;
+}
+
+h2 {
+    color: white;
+    margin: 2px;
+}
+
+button {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    height: 21px;
+    width: 100px;
+}
+
+textarea {
+    width: 218px;
+    max-width: 218px;
+    height:fit-content;
+}
+
+input[type=checkbox] {
+    float: right;
+    vertical-align: middle;
+    position: relative;
+    margin: 2px;
+}
